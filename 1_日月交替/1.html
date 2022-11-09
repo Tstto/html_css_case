@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS+CSS实现日月交替效果</title>
+    <link rel="stylesheet" href="./1.css">
+    <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        function btnChange(str){
+            document.getElementById('container').setAttribute('class',str)
+        }
+    </script>
+</head>
+<body>
+    <div class="btn-box">
+        <div onclick="btnChange('light')">
+            <i class="fa fa-sun-o" aria-hidden="true"></i> 日升
+        </div>
+        <div onclick="btnChange('dark')">
+            <i class="fa fa-moon-o" aria-hidden="true"></i>日息
+        </div>
+    </div>
+    <div class="dark" id="container">
+        <div class="bg"></div>
+        <div class="moon-box">
+            <div class="moon"></div>
+        </div>
+        <div class="sun-box">
+            <div class="sun"></div>
+        </div>
+        <div class="sea"></div>
+    </div>
+</body>
+
+</html>
